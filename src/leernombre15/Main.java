@@ -13,7 +13,7 @@ public class Main {
 	    ProcessBuilder pb = new ProcessBuilder("java","paquete.paquete","");
 	    pb.directory(directorio);
 	    System.out.printf("Directorio de trabajo: %s%n",pb.directory());
-	        
+	    //se ejecuta el proceso    
 	    Process p = pb.start();
 	    try{
 	        InputStream is = p.getErrorStream();

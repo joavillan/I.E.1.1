@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-
+		
 		File directorio = new File(".\\bin");
 		ProcessBuilder pb = new ProcessBuilder("java", "actividad17.EjemploLectura");
 		pb.directory(directorio);
@@ -37,7 +37,6 @@ public class Main {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 }

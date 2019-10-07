@@ -1,24 +1,27 @@
-package actividad17;
+package actividad18;
 
 import java.io.File;
 import java.io.IOException;
 
-public class Ejercicio7 {
+public class Ejercicio8 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
 		File directorio = new File(".\\bin");
-		ProcessBuilder pb = new ProcessBuilder("java", "actividad17.EjemploLectura");
+		ProcessBuilder pb = new ProcessBuilder("java", "actividad18.EjemploLectura");
+		
 		pb.directory(directorio);
-		//instanciamos los archivos
+		
 		File fBat = new File("entrada.bat");
-		File fOut = new File("salida.txt");
+		//File fOut = new File("salida.txt");
 		File fErr = new File("error.txt");
-		//hacemos las redirecciones a los archivos
+		
 		pb.redirectInput(fBat);
-		pb.redirectOutput(fOut);
+		//pb.redirectOutput(fOut);
 		pb.redirectError(fErr);
+		//hacemos la redireccion a la consola
+		pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 		Process p = pb.start();
 		
 		//COMPROBACION DE ERROR - 0 bien - 1 mal
